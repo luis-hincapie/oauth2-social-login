@@ -1,0 +1,11 @@
+  spring:
+    security:
+      oauth2:
+        client:
+          registration:
+            github:
+              client-id: Iv1.fd923c3e9ca2727e
+              client-secret: 17a5fa2f1cd5062a5830cd5b49f07bf534b72302
+            google:
+              client-id: 458708312429-tfaitgemns31glu174tnq1mtk9p8snih.apps.googleusercontent.com
+              client-secret: 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
