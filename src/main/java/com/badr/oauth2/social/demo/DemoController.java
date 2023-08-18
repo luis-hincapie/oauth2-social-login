@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
+
 @RestController
 @RequestMapping("/api/v1/demo")
 public class DemoController {
@@ -14,5 +16,11 @@ public class DemoController {
     @GetMapping()
     public ResponseEntity<String> hello(){
         return ResponseEntity.ok("Hello world!!!!!!!!!!!!!");
+    }
+
+    @GetMapping("/user")
+    public Principal user(Principal principal) {
+        System.out.println("username : " + principal.getName());
+        return principal;
     }
 }

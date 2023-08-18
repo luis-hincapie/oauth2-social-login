@@ -21,7 +21,7 @@ public class SecurityConfig {
                 .csrf(cs -> cs.disable())
 
                 .authorizeHttpRequests(req -> req
-                        .requestMatchers("/api/**").denyAll()
+                        .requestMatchers("/api/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 //.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
